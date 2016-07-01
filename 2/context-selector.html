@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            color: #999;
+        }
+
+        .top-level p {
+            color: #999;
+        }
+
+        .top-level > p {
+            color: brown;
+        }
+
+        .top-level .second-level p:nth-child(2) + p {
+            font-weight: 600;
+            color: darkgoldenrod;
+        }
+
+        .top-level .second-level p:nth-child(2) ~ p {
+            font-weight: 600;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+<div class="top-level">
+    <div class="second-level">
+        <p>oh my god</p>
+
+        <p>hello world</p>
+
+        <p>see you later</p>
+
+        <p>see you later2</p>
+    </div>
+    <p>my world</p>
+</div>
+</body>
+</html>

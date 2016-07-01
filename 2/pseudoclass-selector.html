@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .btn:link {
+            color: #999999;
+        }
+
+        .btn:visited {
+            color: chocolate;
+        }
+
+        .btn:hover {
+            color: antiquewhite;
+        }
+
+        .btn:active {
+            color: blue;
+        }
+
+        /*:focus*/
+        .word:focus {
+            border: 5px solid #ccc;
+        }
+
+        /*:target*/
+        #info2:target {
+            background-color: burlywood;
+        }
+
+        /*:first-child, :last-child, :nth-child(n)*/
+
+        /*::first-letter*/
+        #info1 + p::first-letter {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        #info1 + p::first-line {
+            color: blueviolet;
+        }
+
+        .le::before {
+            display: table;
+            content: 'before item  ';
+        }
+
+        .le::after {
+            display: table;
+            content: '     after item';
+        }
+    </style>
+</head>
+<body>
+<a href="#info2">提交1</a> <br>
+<a href="" class="btn">提交2</a>
+
+<input class="word" type="text"/>
+
+
+<div>
+    <h6 id="info1">see</h6>
+
+    <p>
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+        see is the eye.
+    </p>
+
+    <h6 id="info2">joy</h6>
+
+    <p>
+        joy is the eye.
+        joy is the eye.
+        joy is the eye.
+        joy is the eye.
+        joy is the eye.
+        joy is the eye.
+    </p>
+</div>
+
+<div>
+    <div class="le">sir</div>
+</div>
+</body>
+</html>
