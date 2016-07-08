@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>没有父元素如何清除浮动</title>
+    <style>
+        section {
+            width: 300px;
+            border: 1px solid red;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            float: left;
+            margin: 0 4px 4px 0;
+        }
+
+        p {
+            margin: 0 0 5px 0;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <img src="imgs/1.jpg">
+
+    <p class="clearfix">This text sits next to the image and because the...</p>
+    <img src="imgs/2.jgp">
+
+    <p class="clearfix">This text is short, so the next image can float up...</p>
+    <img src="imgs/yellow_float.jpg">
+
+    <p class="clearfix">Because the previous image's text does not...</p>
+</section>
+</body>
+</html>
